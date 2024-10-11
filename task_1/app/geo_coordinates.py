@@ -1,11 +1,12 @@
 import requests
+from typing import Tuple, Any
 
 from .logger import logger
 
 
 class GeoCoordinates:
     @classmethod
-    def get_coordinates(cls, city_name):
+    def get_coordinates(cls, city_name: str) -> Tuple[Any]:
         try:
             url = "https://nominatim.openstreetmap.org/search"
             params = {
